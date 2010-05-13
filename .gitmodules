@@ -7,3 +7,9 @@
 [submodule "Externals/NSStatusItem+Iconology"]
 	path = Externals/NSStatusItem+Iconology
 	url = git://github.com/monoceroi/NSStatusItem-Iconology.git
+[submodule "Externals/LFWebAPIKit"]
+	path = Externals/LFWebAPIKit
+	url = git://github.com/lukhnos/LFWebAPIKit.git
+[submodule "Externals/JSON-Framework"]
+	path = Externals/JSON-Framework
+	url = http://github.com/stig/json-framework.git
