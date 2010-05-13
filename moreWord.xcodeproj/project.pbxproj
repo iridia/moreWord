@@ -12,6 +12,7 @@
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		FF232EF9119CC69500FAEE34 /* MWStatusItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FF232EF8119CC69500FAEE34 /* MWStatusItem.m */; };
 		FF5820D7119BEDC100131874 /* NSStatusItem+Iconology.m in Sources */ = {isa = PBXBuildFile; fileRef = FF5820D6119BEDC100131874 /* NSStatusItem+Iconology.m */; };
 		FF58211A119BF0AB00131874 /* MWStatusItemIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FF582119119BF0AB00131874 /* MWStatusItemIcon.pdf */; };
 		FF70ED67119C625700A58703 /* MWStatusItemIconAlternate.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FF70ED66119C625700A58703 /* MWStatusItemIconAlternate.pdf */; };
@@ -35,42 +36,42 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = FFFDED85119CBA8900EFB205 /* JSON.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 53D229810C96121600276605 /* JSON.framework */;
+			remoteGlobalIDString = 53D229810C96121600276605;
 			remoteInfo = JSON;
 		};
 		FFFDED95119CBA8900EFB205 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FFFDED85119CBA8900EFB205 /* JSON.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 53D2298D0C96122A00276605 /* Tests.octest */;
+			remoteGlobalIDString = 53D2298D0C96122A00276605;
 			remoteInfo = Tests;
 		};
 		FFFDED97119CBA8900EFB205 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FFFDED85119CBA8900EFB205 /* JSON.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = FE2BBD800D8B0D3900184787 /* libjson.a */;
+			remoteGlobalIDString = FE2BBD800D8B0D3900184787;
 			remoteInfo = libjson;
 		};
 		FFFDED99119CBA8900EFB205 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FFFDED85119CBA8900EFB205 /* JSON.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = FE2BBDAB0D8B0EE000184787 /* libjsontests.octest */;
+			remoteGlobalIDString = FE2BBDAB0D8B0EE000184787;
 			remoteInfo = libjsontests;
 		};
 		FFFDED9B119CBA8900EFB205 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FFFDED85119CBA8900EFB205 /* JSON.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 53EF4D400DC247B3005F5E6D /* bench */;
+			remoteGlobalIDString = 53EF4D400DC247B3005F5E6D;
 			remoteInfo = bench;
 		};
 		FFFDEDE0119CBB0700EFB205 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FFFDED85119CBA8900EFB205 /* JSON.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 53D229800C96121600276605 /* JSON */;
+			remoteGlobalIDString = 53D229800C96121600276605;
 			remoteInfo = JSON;
 		};
 /* End PBXContainerItemProxy section */
@@ -102,6 +103,8 @@
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		8D1107310486CEB800E47090 /* moreWord-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "moreWord-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* moreWord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = moreWord.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF232EF7119CC69500FAEE34 /* MWStatusItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWStatusItem.h; sourceTree = "<group>"; };
+		FF232EF8119CC69500FAEE34 /* MWStatusItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWStatusItem.m; sourceTree = "<group>"; };
 		FF5820D5119BEDC100131874 /* NSStatusItem+Iconology.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSStatusItem+Iconology.h"; path = "Externals/NSStatusItem+Iconology/NSStatusItem+Iconology.h"; sourceTree = "<group>"; };
 		FF5820D6119BEDC100131874 /* NSStatusItem+Iconology.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSStatusItem+Iconology.m"; path = "Externals/NSStatusItem+Iconology/NSStatusItem+Iconology.m"; sourceTree = "<group>"; };
 		FF582119119BF0AB00131874 /* MWStatusItemIcon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = MWStatusItemIcon.pdf; path = Resources/MWStatusItemIcon.pdf; sourceTree = "<group>"; };
@@ -148,6 +151,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				FF232EF7119CC69500FAEE34 /* MWStatusItem.h */,
+				FF232EF8119CC69500FAEE34 /* MWStatusItem.m */,
 				FF70F126119C992E00A58703 /* MWTransformSentencesGenerated.h */,
 				FF70F127119C992E00A58703 /* MWTransformSentencesGenerated.m */,
 				FF70F0C9119C956D00A58703 /* MWConfiguration.h */,
@@ -379,6 +384,7 @@
 				FF70F343119CB32F00A58703 /* LFHTTPRequest.m in Sources */,
 				FF70F344119CB32F00A58703 /* LFSiteReachability.m in Sources */,
 				FF70F345119CB32F00A58703 /* NSData+LFHTTPFormExtensions.m in Sources */,
+				FF232EF9119CC69500FAEE34 /* MWStatusItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

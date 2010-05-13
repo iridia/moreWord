@@ -15,14 +15,14 @@
 
 #import "LFWebAPIKit.h"
 
+#import "MWStatusItem.h"
 #import "NSStatusItem+Iconology.h"
 #import "MWConfiguration.h"
 #import "MWTransformSentencesGenerated.h"
 
 @interface MWController : NSObject <NSApplicationDelegate> {
 
-
-	NSStatusItem *statusBarItem;
+	MWStatusItem *statusBarItem;
 	IBOutlet NSMenu *statusBarItemMenu;
 
 	BOOL busy;
