@@ -7,6 +7,14 @@
 //
 
 #import <Cocoa/Cocoa.h>
+//	#import <JSON/JSON.h>
+
+#import "JSON/SBJSON.h"
+#import "JSON/NSObject+SBJSON.h"
+#import "JSON/NSString+SBJSON.h"
+
+#import "LFWebAPIKit.h"
+
 #import "NSStatusItem+Iconology.h"
 #import "MWConfiguration.h"
 #import "MWTransformSentencesGenerated.h"
