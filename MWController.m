@@ -78,8 +78,6 @@
 
 	
 	self.busy = NO;
-	
-//	self.hasRecentlyGeneratedSentences = NO;
 
 }
 
@@ -136,6 +134,8 @@
 
 - (IBAction) shouldGenerateOneSentence:(id)sender {
 
+	[self startGeneratingSentences:1];
+
 }
 
 
@@ -168,9 +168,6 @@
 
 	[self startGeneratingSentences:[[(NSMatrix *)sender selectedCell] tag]];
 	
-	[self.statusBarItem startAnimation];
-	[[self.statusBarItem menu] cancelTracking];
-
 }
 
 
@@ -189,6 +186,10 @@
 
 - (IBAction) shouldTerminateApplication:(id)sender {
 
+
+	[[NSApplication sharedApplication] terminate:self];
+
+
 }
 
 
@@ -204,8 +205,11 @@
 
 - (void) startGeneratingSentences:(NSInteger)numberOfSentences {
 
-	NSLog(@"Generating %i sentences", numberOfSentences);
+	NSLog(@"Generating %i sentence(s).", numberOfSentences);
 	
+	[self.statusBarItem startAnimation];
+	[[self.statusBarItem menu] cancelTracking];
+
 	self.busy = YES;
 	
 	[[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"hasRecentlyGeneratedSentences"];

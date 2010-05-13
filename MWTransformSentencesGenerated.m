@@ -37,16 +37,20 @@
 
 - (id) transformedValue:(id)value {
 	
-	NSInteger *sentencesRecentlyGenerated = (NSInteger *)value;
+	NSInteger sentencesRecentlyGenerated = (NSInteger)value;
 
-	if(sentencesRecentlyGenerated == 0){
+	if (sentencesRecentlyGenerated == 0){
 
 		return @"Has not generated any sentence yet";
 
+	} else if (sentencesRecentlyGenerated == 1) {
+
+		return [NSString stringWithFormat:@"Make %i Sentence", sentencesRecentlyGenerated];
+
 	} else {
-
-		return @"OMG";
-
+	
+		return [NSString stringWithFormat:@"Make %i Sentences", sentencesRecentlyGenerated];
+	
 	}
 	
 	return nil;
