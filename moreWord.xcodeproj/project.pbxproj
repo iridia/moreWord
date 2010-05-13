@@ -19,6 +19,8 @@
 		FF70EEFE119C73E100A58703 /* ObjC-SwizzleMethods.c in Sources */ = {isa = PBXBuildFile; fileRef = FF70EEFD119C73E100A58703 /* ObjC-SwizzleMethods.c */; };
 		FF70F096119C936200A58703 /* MWApplicationIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = FF70F095119C936200A58703 /* MWApplicationIcon.icns */; };
 		FF70F128119C992E00A58703 /* MWTransformSentencesGenerated.m in Sources */ = {isa = PBXBuildFile; fileRef = FF70F127119C992E00A58703 /* MWTransformSentencesGenerated.m */; };
+		FF70F26F119CA6FC00A58703 /* NSView+DumpDimensions.m in Sources */ = {isa = PBXBuildFile; fileRef = FF70F26E119CA6FC00A58703 /* NSView+DumpDimensions.m */; };
+		FF70F2D5119CAD9E00A58703 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF70F2D4119CAD9E00A58703 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,9 @@
 		FF70F0C9119C956D00A58703 /* MWConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWConfiguration.h; sourceTree = "<group>"; };
 		FF70F126119C992E00A58703 /* MWTransformSentencesGenerated.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWTransformSentencesGenerated.h; sourceTree = "<group>"; };
 		FF70F127119C992E00A58703 /* MWTransformSentencesGenerated.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWTransformSentencesGenerated.m; sourceTree = "<group>"; };
+		FF70F26D119CA6FC00A58703 /* NSView+DumpDimensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+DumpDimensions.h"; sourceTree = "<group>"; };
+		FF70F26E119CA6FC00A58703 /* NSView+DumpDimensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+DumpDimensions.m"; sourceTree = "<group>"; };
+		FF70F2D4119CAD9E00A58703 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +59,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				FF70F2D5119CAD9E00A58703 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +113,7 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				FF70F2D4119CAD9E00A58703 /* QuartzCore.framework */,
 			);
 			name = moreWord;
 			sourceTree = "<group>";
@@ -145,6 +152,8 @@
 		FF70F035119C835D00A58703 /* Externals */ = {
 			isa = PBXGroup;
 			children = (
+				FF70F26D119CA6FC00A58703 /* NSView+DumpDimensions.h */,
+				FF70F26E119CA6FC00A58703 /* NSView+DumpDimensions.m */,
 				FF70EEFC119C73E100A58703 /* ObjC-SwizzleMethods.h */,
 				FF70EEFD119C73E100A58703 /* ObjC-SwizzleMethods.c */,
 				FF70EE95119C707500A58703 /* NSView+Centering.h */,
@@ -219,6 +228,7 @@
 				FF70EE97119C707500A58703 /* NSView+Centering.m in Sources */,
 				FF70EEFE119C73E100A58703 /* ObjC-SwizzleMethods.c in Sources */,
 				FF70F128119C992E00A58703 /* MWTransformSentencesGenerated.m in Sources */,
+				FF70F26F119CA6FC00A58703 /* NSView+DumpDimensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

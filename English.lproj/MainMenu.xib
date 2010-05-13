@@ -49,53 +49,54 @@
 				<string key="NSTitle"/>
 				<object class="NSMutableArray" key="NSMenuItems">
 					<bool key="EncodedWithXMLCoder">YES</bool>
-					<object class="NSMenuItem" id="370262051">
+					<object class="NSMenuItem" id="274136860">
 						<reference key="NSMenu" ref="476625912"/>
 						<string key="NSTitle">Cancel</string>
 						<string key="NSKeyEquiv"/>
 						<int key="NSMnemonicLoc">2147483647</int>
-						<object class="NSCustomResource" key="NSOnImage" id="49258236">
+						<object class="NSCustomResource" key="NSOnImage" id="203732120">
 							<string key="NSClassName">NSImage</string>
 							<string key="NSResourceName">NSMenuCheckmark</string>
 						</object>
-						<object class="NSCustomResource" key="NSMixedImage" id="167880928">
+						<object class="NSCustomResource" key="NSMixedImage" id="123769931">
 							<string key="NSClassName">NSImage</string>
 							<string key="NSResourceName">NSMenuMixedState</string>
 						</object>
 					</object>
-					<object class="NSMenuItem" id="525637552">
+					<object class="NSMenuItem" id="18444474">
 						<reference key="NSMenu" ref="476625912"/>
 						<bool key="NSIsDisabled">YES</bool>
 						<bool key="NSIsSeparator">YES</bool>
 						<string key="NSTitle"/>
 						<string key="NSKeyEquiv"/>
 						<int key="NSMnemonicLoc">2147483647</int>
-						<reference key="NSOnImage" ref="49258236"/>
-						<reference key="NSMixedImage" ref="167880928"/>
+						<reference key="NSOnImage" ref="203732120"/>
+						<reference key="NSMixedImage" ref="123769931"/>
 					</object>
 					<object class="NSMenuItem" id="970582970">
 						<reference key="NSMenu" ref="476625912"/>
 						<string key="NSTitle">Make Sentence</string>
 						<string key="NSKeyEquiv"/>
 						<int key="NSMnemonicLoc">2147483647</int>
-						<reference key="NSOnImage" ref="49258236"/>
-						<reference key="NSMixedImage" ref="167880928"/>
+						<reference key="NSOnImage" ref="203732120"/>
+						<reference key="NSMixedImage" ref="123769931"/>
 					</object>
 					<object class="NSMenuItem" id="376729150">
 						<reference key="NSMenu" ref="476625912"/>
 						<string key="NSTitle">Make 2 Sentences</string>
 						<string key="NSKeyEquiv"/>
 						<int key="NSMnemonicLoc">2147483647</int>
-						<reference key="NSOnImage" ref="49258236"/>
-						<reference key="NSMixedImage" ref="167880928"/>
+						<reference key="NSOnImage" ref="203732120"/>
+						<reference key="NSMixedImage" ref="123769931"/>
 					</object>
 					<object class="NSMenuItem" id="900968803">
 						<reference key="NSMenu" ref="476625912"/>
+						<bool key="NSIsHidden">YES</bool>
 						<string key="NSTitle">Make Many Sentences…</string>
 						<string key="NSKeyEquiv"/>
 						<int key="NSMnemonicLoc">2147483647</int>
-						<reference key="NSOnImage" ref="49258236"/>
-						<reference key="NSMixedImage" ref="167880928"/>
+						<reference key="NSOnImage" ref="203732120"/>
+						<reference key="NSMixedImage" ref="123769931"/>
 					</object>
 					<object class="NSMenuItem" id="747646171">
 						<reference key="NSMenu" ref="476625912"/>
@@ -104,16 +105,16 @@
 						<string key="NSTitle"/>
 						<string key="NSKeyEquiv"/>
 						<int key="NSMnemonicLoc">2147483647</int>
-						<reference key="NSOnImage" ref="49258236"/>
-						<reference key="NSMixedImage" ref="167880928"/>
+						<reference key="NSOnImage" ref="203732120"/>
+						<reference key="NSMixedImage" ref="123769931"/>
 					</object>
 					<object class="NSMenuItem" id="1017752626">
 						<reference key="NSMenu" ref="476625912"/>
 						<string key="NSTitle">INSERT MATRIX</string>
 						<string key="NSKeyEquiv"/>
 						<int key="NSMnemonicLoc">2147483647</int>
-						<reference key="NSOnImage" ref="49258236"/>
-						<reference key="NSMixedImage" ref="167880928"/>
+						<reference key="NSOnImage" ref="203732120"/>
+						<reference key="NSMixedImage" ref="123769931"/>
 					</object>
 					<object class="NSMenuItem" id="878249376">
 						<reference key="NSMenu" ref="476625912"/>
@@ -122,16 +123,16 @@
 						<string key="NSTitle"/>
 						<string key="NSKeyEquiv"/>
 						<int key="NSMnemonicLoc">2147483647</int>
-						<reference key="NSOnImage" ref="49258236"/>
-						<reference key="NSMixedImage" ref="167880928"/>
+						<reference key="NSOnImage" ref="203732120"/>
+						<reference key="NSMixedImage" ref="123769931"/>
 					</object>
 					<object class="NSMenuItem" id="313200867">
 						<reference key="NSMenu" ref="476625912"/>
 						<string key="NSTitle">History</string>
 						<string key="NSKeyEquiv"/>
 						<int key="NSMnemonicLoc">2147483647</int>
-						<reference key="NSOnImage" ref="49258236"/>
-						<reference key="NSMixedImage" ref="167880928"/>
+						<reference key="NSOnImage" ref="203732120"/>
+						<reference key="NSMixedImage" ref="123769931"/>
 						<string key="NSAction">submenuAction:</string>
 						<object class="NSMenu" key="NSSubmenu" id="607010871">
 							<string key="NSTitle">History</string>
@@ -142,8 +143,8 @@
 									<string key="NSTitle">(Nothing)</string>
 									<string key="NSKeyEquiv"/>
 									<int key="NSMnemonicLoc">2147483647</int>
-									<reference key="NSOnImage" ref="49258236"/>
-									<reference key="NSMixedImage" ref="167880928"/>
+									<reference key="NSOnImage" ref="203732120"/>
+									<reference key="NSMixedImage" ref="123769931"/>
 								</object>
 								<object class="NSMenuItem" id="297856404">
 									<reference key="NSMenu" ref="607010871"/>
@@ -152,24 +153,24 @@
 									<string key="NSTitle"/>
 									<string key="NSKeyEquiv"/>
 									<int key="NSMnemonicLoc">2147483647</int>
-									<reference key="NSOnImage" ref="49258236"/>
-									<reference key="NSMixedImage" ref="167880928"/>
+									<reference key="NSOnImage" ref="203732120"/>
+									<reference key="NSMixedImage" ref="123769931"/>
 								</object>
 								<object class="NSMenuItem" id="981468432">
 									<reference key="NSMenu" ref="607010871"/>
 									<string key="NSTitle">Show All History</string>
 									<string key="NSKeyEquiv"/>
 									<int key="NSMnemonicLoc">2147483647</int>
-									<reference key="NSOnImage" ref="49258236"/>
-									<reference key="NSMixedImage" ref="167880928"/>
+									<reference key="NSOnImage" ref="203732120"/>
+									<reference key="NSMixedImage" ref="123769931"/>
 								</object>
 								<object class="NSMenuItem" id="802305046">
 									<reference key="NSMenu" ref="607010871"/>
 									<string key="NSTitle">Clear History</string>
 									<string key="NSKeyEquiv"/>
 									<int key="NSMnemonicLoc">2147483647</int>
-									<reference key="NSOnImage" ref="49258236"/>
-									<reference key="NSMixedImage" ref="167880928"/>
+									<reference key="NSOnImage" ref="203732120"/>
+									<reference key="NSMixedImage" ref="123769931"/>
 								</object>
 							</object>
 						</object>
@@ -181,16 +182,16 @@
 						<string key="NSTitle"/>
 						<string key="NSKeyEquiv"/>
 						<int key="NSMnemonicLoc">2147483647</int>
-						<reference key="NSOnImage" ref="49258236"/>
-						<reference key="NSMixedImage" ref="167880928"/>
+						<reference key="NSOnImage" ref="203732120"/>
+						<reference key="NSMixedImage" ref="123769931"/>
 					</object>
 					<object class="NSMenuItem" id="886570914">
 						<reference key="NSMenu" ref="476625912"/>
 						<string key="NSTitle">About MoreWord…</string>
 						<string key="NSKeyEquiv"/>
 						<int key="NSMnemonicLoc">2147483647</int>
-						<reference key="NSOnImage" ref="49258236"/>
-						<reference key="NSMixedImage" ref="167880928"/>
+						<reference key="NSOnImage" ref="203732120"/>
+						<reference key="NSMixedImage" ref="123769931"/>
 					</object>
 					<object class="NSMenuItem" id="913860339">
 						<reference key="NSMenu" ref="476625912"/>
@@ -198,8 +199,8 @@
 						<string key="NSKeyEquiv">q</string>
 						<int key="NSKeyEquivModMask">1048576</int>
 						<int key="NSMnemonicLoc">2147483647</int>
-						<reference key="NSOnImage" ref="49258236"/>
-						<reference key="NSMixedImage" ref="167880928"/>
+						<reference key="NSOnImage" ref="203732120"/>
+						<reference key="NSMixedImage" ref="123769931"/>
 					</object>
 				</object>
 			</object>
@@ -435,7 +436,7 @@
 				<reference key="NSSuperview"/>
 				<string key="NSClassName">NSView</string>
 			</object>
-			<object class="NSUserDefaultsController" id="999804011">
+			<object class="NSUserDefaultsController" id="829206532">
 				<object class="NSMutableArray" key="NSDeclaredKeys">
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>recentlyGeneratedSentences</string>
@@ -544,7 +545,7 @@
 						<string key="label">enabled: busy</string>
 						<reference key="source" ref="376729150"/>
 						<reference key="destination" ref="976324537"/>
-						<object class="NSNibBindingConnector" key="connector" id="1049815521">
+						<object class="NSNibBindingConnector" key="connector" id="466383073">
 							<reference key="NSSource" ref="376729150"/>
 							<reference key="NSDestination" ref="976324537"/>
 							<string key="NSLabel">enabled: busy</string>
@@ -602,10 +603,10 @@
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
 						<string key="label">hidden: busy</string>
-						<reference key="source" ref="370262051"/>
+						<reference key="source" ref="274136860"/>
 						<reference key="destination" ref="976324537"/>
 						<object class="NSNibBindingConnector" key="connector">
-							<reference key="NSSource" ref="370262051"/>
+							<reference key="NSSource" ref="274136860"/>
 							<reference key="NSDestination" ref="976324537"/>
 							<string key="NSLabel">hidden: busy</string>
 							<string key="NSBinding">hidden</string>
@@ -622,10 +623,10 @@
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
 						<string key="label">hidden: busy</string>
-						<reference key="source" ref="525637552"/>
+						<reference key="source" ref="18444474"/>
 						<reference key="destination" ref="976324537"/>
 						<object class="NSNibBindingConnector" key="connector">
-							<reference key="NSSource" ref="525637552"/>
+							<reference key="NSSource" ref="18444474"/>
 							<reference key="NSDestination" ref="976324537"/>
 							<string key="NSLabel">hidden: busy</string>
 							<string key="NSBinding">hidden</string>
@@ -643,10 +644,10 @@
 					<object class="IBBindingConnection" key="connection">
 						<string key="label">title: values.recentlyGeneratedSentences</string>
 						<reference key="source" ref="376729150"/>
-						<reference key="destination" ref="999804011"/>
+						<reference key="destination" ref="829206532"/>
 						<object class="NSNibBindingConnector" key="connector">
 							<reference key="NSSource" ref="376729150"/>
-							<reference key="NSDestination" ref="999804011"/>
+							<reference key="NSDestination" ref="829206532"/>
 							<string key="NSLabel">title: values.recentlyGeneratedSentences</string>
 							<string key="NSBinding">title</string>
 							<string key="NSKeyPath">values.recentlyGeneratedSentences</string>
@@ -680,10 +681,10 @@
 					<object class="IBBindingConnection" key="connection">
 						<string key="label">enabled2: values.hasRecentlyGeneratedSentences</string>
 						<reference key="source" ref="376729150"/>
-						<reference key="destination" ref="999804011"/>
-						<object class="NSNibBindingConnector" key="connector" id="67656050">
+						<reference key="destination" ref="829206532"/>
+						<object class="NSNibBindingConnector" key="connector" id="923994640">
 							<reference key="NSSource" ref="376729150"/>
-							<reference key="NSDestination" ref="999804011"/>
+							<reference key="NSDestination" ref="829206532"/>
 							<string key="NSLabel">enabled2: values.hasRecentlyGeneratedSentences</string>
 							<string key="NSBinding">enabled2</string>
 							<string key="NSKeyPath">values.hasRecentlyGeneratedSentences</string>
@@ -706,7 +707,7 @@
 									<boolean value="NO"/>
 								</object>
 							</object>
-							<reference key="NSPreviousConnector" ref="1049815521"/>
+							<reference key="NSPreviousConnector" ref="466383073"/>
 							<int key="NSNibBindingConnectorVersion">2</int>
 						</object>
 					</object>
@@ -716,10 +717,10 @@
 					<object class="IBBindingConnection" key="connection">
 						<string key="label">hidden: values.hasRecentlyGeneratedSentences</string>
 						<reference key="source" ref="376729150"/>
-						<reference key="destination" ref="999804011"/>
+						<reference key="destination" ref="829206532"/>
 						<object class="NSNibBindingConnector" key="connector">
 							<reference key="NSSource" ref="376729150"/>
-							<reference key="NSDestination" ref="999804011"/>
+							<reference key="NSDestination" ref="829206532"/>
 							<string key="NSLabel">hidden: values.hasRecentlyGeneratedSentences</string>
 							<string key="NSBinding">hidden</string>
 							<string key="NSKeyPath">values.hasRecentlyGeneratedSentences</string>
@@ -727,7 +728,7 @@
 								<string key="NS.key.0">NSValueTransformerName</string>
 								<string key="NS.object.0">NSNegateBoolean</string>
 							</object>
-							<reference key="NSPreviousConnector" ref="67656050"/>
+							<reference key="NSPreviousConnector" ref="923994640"/>
 							<int key="NSNibBindingConnectorVersion">2</int>
 						</object>
 					</object>
@@ -757,7 +758,7 @@
 					<object class="IBActionConnection" key="connection">
 						<string key="label">shouldCancelOperation:</string>
 						<reference key="source" ref="976324537"/>
-						<reference key="destination" ref="370262051"/>
+						<reference key="destination" ref="274136860"/>
 					</object>
 					<int key="connectionID">735</int>
 				</object>
@@ -814,8 +815,8 @@
 							<reference ref="900968803"/>
 							<reference ref="313200867"/>
 							<reference ref="50122194"/>
-							<reference ref="370262051"/>
-							<reference ref="525637552"/>
+							<reference ref="274136860"/>
+							<reference ref="18444474"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -1005,17 +1006,17 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">691</int>
-						<reference key="object" ref="370262051"/>
+						<reference key="object" ref="274136860"/>
 						<reference key="parent" ref="476625912"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">692</int>
-						<reference key="object" ref="525637552"/>
+						<reference key="object" ref="18444474"/>
 						<reference key="parent" ref="476625912"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">700</int>
-						<reference key="object" ref="999804011"/>
+						<reference key="object" ref="829206532"/>
 						<reference key="parent" ref="0"/>
 					</object>
 				</object>
@@ -1101,7 +1102,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">735</int>
+			<int key="maxID">739</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -1216,6 +1217,13 @@
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">Externals/NSView+Centering/NSView+Centering.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSView</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">NSView+DumpDimensions.h</string>
 					</object>
 				</object>
 			</object>
@@ -1583,6 +1591,27 @@
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBFrameworkSource</string>
 						<string key="minorKey">Foundation.framework/Headers/NSURLDownload.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">QuartzCore.framework/Headers/CAAnimation.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">QuartzCore.framework/Headers/CALayer.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">QuartzCore.framework/Headers/CIImageProvider.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">

@@ -101,6 +101,8 @@
 - (void) shouldConfigureStatusBarItem {
 
 	[self.statusBarItem setMenu:self.statusBarItemMenu];
+	[[self.statusBarItem menu] setDelegate:self.statusBarItem];
+	
 	[self.statusBarItem setTitle:@""];
 	[self.statusBarItem setHighlightMode:YES];
 	[self.statusBarItem setIcon:[NSImage imageNamed:@"MWStatusItemIcon.pdf"] withAlternateIcon:[NSImage imageNamed:@"MWStatusItemIconAlternate.pdf"] ];	
@@ -155,7 +157,7 @@
 - (IBAction) shouldGenerateManySentencesWithInput:(id)sender {
 
 
-
+	//	Needs a prompt!
 
 
 }
