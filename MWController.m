@@ -54,10 +54,7 @@
 
 	[self shouldMakeStatusBarItem];
 
-	[[NSGraphicsContext currentContext] setImageInterpolation:NSImageInterpolationHigh];
-	[[NSGraphicsContext currentContext] setShouldAntialias:YES];
-
-	[self.statusBarItem setIcon:[NSImage imageNamed:@"MWStatusItemIcon.pdf"]];
+	[self.statusBarItem setIcon:[NSImage imageNamed:@"MWStatusItemIcon.pdf"] withAlternateIcon:[NSImage imageNamed:@"MWStatusItemIconAlternate.pdf"] ];
 
 }
 
@@ -78,6 +75,78 @@
 	[self.statusBarItem setMenu:self.statusBarItemMenu];
 	[self.statusBarItem setTitle:@""];
 	[self.statusBarItem setHighlightMode:YES];
+
+}
+
+
+
+
+
+
+
+
+
+# pragma mark IBOutlets
+
+- (IBAction) shouldGenerateOneSentence:(id)sender {
+
+}
+
+
+
+
+
+- (IBAction) shouldGenerateAsManySentencesAsRecentlyDid:(id)sender {
+
+}
+
+
+
+
+
+- (IBAction) shouldGenerateManySentencesWithInput:(id)sender {
+
+
+
+
+
+}
+
+
+
+
+
+- (IBAction) shouldGenerateManySentences:(id)sender {
+
+
+
+
+
+}
+
+
+
+
+
+- (IBAction) shouldShowPreferences:(id)sender {
+
+	[self.statusBarItem startAnimation];
+
+}
+
+
+
+
+
+- (IBAction) shouldShowAboutWindow:(id)sender {
+
+}
+
+
+
+
+
+- (IBAction) shouldTerminateApplication:(id)sender {
 
 }
 

@@ -34,7 +34,8 @@
 
 - (IBAction) shouldGenerateOneSentence:(id)sender;
 - (IBAction) shouldGenerateAsManySentencesAsRecentlyDid:(id)sender;
-- (IBAction) shouldGenerateManySentences:(id)sender;
+- (IBAction) shouldGenerateManySentencesWithInput:(id)sender;
+- (IBAction) shouldGenerateManySentencesWithMatrixValue:(id)sender;
 
 - (IBAction) shouldShowPreferences:(id)sender;
 - (IBAction) shouldShowAboutWindow:(id)sender;

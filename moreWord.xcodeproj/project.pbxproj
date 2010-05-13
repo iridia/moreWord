@@ -14,7 +14,9 @@
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		FF5820D7119BEDC100131874 /* NSStatusItem+Iconology.m in Sources */ = {isa = PBXBuildFile; fileRef = FF5820D6119BEDC100131874 /* NSStatusItem+Iconology.m */; };
 		FF58211A119BF0AB00131874 /* MWStatusItemIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FF582119119BF0AB00131874 /* MWStatusItemIcon.pdf */; };
-		FF58218D119BF45000131874 /* MWStatusItemIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = FF58218C119BF45000131874 /* MWStatusItemIcon.png */; };
+		FF70ED67119C625700A58703 /* MWStatusItemIconAlternate.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FF70ED66119C625700A58703 /* MWStatusItemIconAlternate.pdf */; };
+		FF70EE97119C707500A58703 /* NSView+Centering.m in Sources */ = {isa = PBXBuildFile; fileRef = FF70EE96119C707500A58703 /* NSView+Centering.m */; };
+		FF70EEFE119C73E100A58703 /* ObjC-SwizzleMethods.c in Sources */ = {isa = PBXBuildFile; fileRef = FF70EEFD119C73E100A58703 /* ObjC-SwizzleMethods.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +35,11 @@
 		FF5820D5119BEDC100131874 /* NSStatusItem+Iconology.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSStatusItem+Iconology.h"; sourceTree = "<group>"; };
 		FF5820D6119BEDC100131874 /* NSStatusItem+Iconology.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSStatusItem+Iconology.m"; sourceTree = "<group>"; };
 		FF582119119BF0AB00131874 /* MWStatusItemIcon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = MWStatusItemIcon.pdf; path = Resources/MWStatusItemIcon.pdf; sourceTree = "<group>"; };
-		FF58218C119BF45000131874 /* MWStatusItemIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MWStatusItemIcon.png; path = Resources/MWStatusItemIcon.png; sourceTree = "<group>"; };
+		FF70ED66119C625700A58703 /* MWStatusItemIconAlternate.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = MWStatusItemIconAlternate.pdf; path = Resources/MWStatusItemIconAlternate.pdf; sourceTree = "<group>"; };
+		FF70EE95119C707500A58703 /* NSView+Centering.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+Centering.h"; sourceTree = "<group>"; };
+		FF70EE96119C707500A58703 /* NSView+Centering.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+Centering.m"; sourceTree = "<group>"; };
+		FF70EEFC119C73E100A58703 /* ObjC-SwizzleMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ObjC-SwizzleMethods.h"; sourceTree = "<group>"; };
+		FF70EEFD119C73E100A58703 /* ObjC-SwizzleMethods.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "ObjC-SwizzleMethods.c"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +57,10 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				FF70EEFC119C73E100A58703 /* ObjC-SwizzleMethods.h */,
+				FF70EEFD119C73E100A58703 /* ObjC-SwizzleMethods.c */,
+				FF70EE95119C707500A58703 /* NSView+Centering.h */,
+				FF70EE96119C707500A58703 /* NSView+Centering.m */,
 				FF5820D5119BEDC100131874 /* NSStatusItem+Iconology.h */,
 				FF5820D6119BEDC100131874 /* NSStatusItem+Iconology.m */,
 				256AC3D80F4B6AC300CF3369 /* MWController.h */,
@@ -110,7 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				FF582119119BF0AB00131874 /* MWStatusItemIcon.pdf */,
-				FF58218C119BF45000131874 /* MWStatusItemIcon.png */,
+				FF70ED66119C625700A58703 /* MWStatusItemIconAlternate.pdf */,
 				8D1107310486CEB800E47090 /* moreWord-Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
@@ -173,7 +183,7 @@
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
 				FF58211A119BF0AB00131874 /* MWStatusItemIcon.pdf in Resources */,
-				FF58218D119BF45000131874 /* MWStatusItemIcon.png in Resources */,
+				FF70ED67119C625700A58703 /* MWStatusItemIconAlternate.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,6 +197,8 @@
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				256AC3DA0F4B6AC300CF3369 /* MWController.m in Sources */,
 				FF5820D7119BEDC100131874 /* NSStatusItem+Iconology.m in Sources */,
+				FF70EE97119C707500A58703 /* NSView+Centering.m in Sources */,
+				FF70EEFE119C73E100A58703 /* ObjC-SwizzleMethods.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
