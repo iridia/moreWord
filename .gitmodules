@@ -1,0 +1,9 @@
+[submodule "Externals/ObjC-SwizzleMethods"]
+	path = Externals/ObjC-SwizzleMethods
+	url = git://github.com/monoceroi/ObjC-SwizzleMethods.git
+[submodule "Externals/NSView+Centering"]
+	path = Externals/NSView+Centering
+	url = git://github.com/monoceroi/NSView-Centering.git
+[submodule "Externals/NSStatusItem+Iconology"]
+	path = Externals/NSStatusItem+Iconology
+	url = git://github.com/monoceroi/NSStatusItem-Iconology.git
