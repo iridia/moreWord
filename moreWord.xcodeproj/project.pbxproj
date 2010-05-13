@@ -32,14 +32,14 @@
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		8D1107310486CEB800E47090 /* moreWord-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "moreWord-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* moreWord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = moreWord.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FF5820D5119BEDC100131874 /* NSStatusItem+Iconology.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSStatusItem+Iconology.h"; sourceTree = "<group>"; };
-		FF5820D6119BEDC100131874 /* NSStatusItem+Iconology.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSStatusItem+Iconology.m"; sourceTree = "<group>"; };
+		FF5820D5119BEDC100131874 /* NSStatusItem+Iconology.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSStatusItem+Iconology.h"; path = "Externals/NSStatusItem+Iconology/NSStatusItem+Iconology.h"; sourceTree = "<group>"; };
+		FF5820D6119BEDC100131874 /* NSStatusItem+Iconology.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSStatusItem+Iconology.m"; path = "Externals/NSStatusItem+Iconology/NSStatusItem+Iconology.m"; sourceTree = "<group>"; };
 		FF582119119BF0AB00131874 /* MWStatusItemIcon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = MWStatusItemIcon.pdf; path = Resources/MWStatusItemIcon.pdf; sourceTree = "<group>"; };
 		FF70ED66119C625700A58703 /* MWStatusItemIconAlternate.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = MWStatusItemIconAlternate.pdf; path = Resources/MWStatusItemIconAlternate.pdf; sourceTree = "<group>"; };
-		FF70EE95119C707500A58703 /* NSView+Centering.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+Centering.h"; sourceTree = "<group>"; };
-		FF70EE96119C707500A58703 /* NSView+Centering.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+Centering.m"; sourceTree = "<group>"; };
-		FF70EEFC119C73E100A58703 /* ObjC-SwizzleMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ObjC-SwizzleMethods.h"; sourceTree = "<group>"; };
-		FF70EEFD119C73E100A58703 /* ObjC-SwizzleMethods.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "ObjC-SwizzleMethods.c"; sourceTree = "<group>"; };
+		FF70EE95119C707500A58703 /* NSView+Centering.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSView+Centering.h"; path = "Externals/NSView+Centering/NSView+Centering.h"; sourceTree = "<group>"; };
+		FF70EE96119C707500A58703 /* NSView+Centering.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSView+Centering.m"; path = "Externals/NSView+Centering/NSView+Centering.m"; sourceTree = "<group>"; };
+		FF70EEFC119C73E100A58703 /* ObjC-SwizzleMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ObjC-SwizzleMethods.h"; path = "Externals/ObjC-SwizzleMethods/ObjC-SwizzleMethods.h"; sourceTree = "<group>"; };
+		FF70EEFD119C73E100A58703 /* ObjC-SwizzleMethods.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "ObjC-SwizzleMethods.c"; path = "Externals/ObjC-SwizzleMethods/ObjC-SwizzleMethods.c"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,12 +57,6 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				FF70EEFC119C73E100A58703 /* ObjC-SwizzleMethods.h */,
-				FF70EEFD119C73E100A58703 /* ObjC-SwizzleMethods.c */,
-				FF70EE95119C707500A58703 /* NSView+Centering.h */,
-				FF70EE96119C707500A58703 /* NSView+Centering.m */,
-				FF5820D5119BEDC100131874 /* NSStatusItem+Iconology.h */,
-				FF5820D6119BEDC100131874 /* NSStatusItem+Iconology.m */,
 				256AC3D80F4B6AC300CF3369 /* MWController.h */,
 				256AC3D90F4B6AC300CF3369 /* MWController.m */,
 			);
@@ -100,6 +94,7 @@
 			children = (
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				FF70F035119C835D00A58703 /* Externals */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
@@ -135,6 +130,19 @@
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FF70F035119C835D00A58703 /* Externals */ = {
+			isa = PBXGroup;
+			children = (
+				FF70EEFC119C73E100A58703 /* ObjC-SwizzleMethods.h */,
+				FF70EEFD119C73E100A58703 /* ObjC-SwizzleMethods.c */,
+				FF70EE95119C707500A58703 /* NSView+Centering.h */,
+				FF70EE96119C707500A58703 /* NSView+Centering.m */,
+				FF5820D5119BEDC100131874 /* NSStatusItem+Iconology.h */,
+				FF5820D6119BEDC100131874 /* NSStatusItem+Iconology.m */,
+			);
+			name = Externals;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
