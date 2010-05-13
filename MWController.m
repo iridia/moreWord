@@ -15,6 +15,9 @@
 @interface MWController (Private)
 
 - (void) shouldMakeStatusBarItem;
+- (void) shouldConfigureStatusBarItem;
+- (void) startGeneratingSentences:(NSInteger)numberOfSentences;
+- (void) stopGeneratingSentences;
 
 @end
 
@@ -29,12 +32,22 @@
 
 @implementation MWController
 
-@synthesize statusBarItem, statusBarItemMenu;
+@synthesize busy, statusBarItem, statusBarItemMenu;
 
 
 
 
 
+
+
+
+
+
++ (void) initialize {
+
+	[NSValueTransformer setValueTransformer:[[MWTransformSentencesGenerated alloc] init] forName:@"MWTransformSentencesGenerated"];
+
+}
 
 
 
@@ -52,9 +65,21 @@
 
 - (void) awakeFromNib {
 
-	[self shouldMakeStatusBarItem];
+	[[NSUserDefaults standardUserDefaults] registerDefaults:[NSDictionary dictionaryWithObjectsAndKeys:
+	
+		NO, @"hasRecentlyGeneratedSentences",
+		0, @"recentlyGeneratedSentences",
+		
+	nil]];
 
-	[self.statusBarItem setIcon:[NSImage imageNamed:@"MWStatusItemIcon.pdf"] withAlternateIcon:[NSImage imageNamed:@"MWStatusItemIconAlternate.pdf"] ];
+
+	[self shouldMakeStatusBarItem];	
+	[self shouldConfigureStatusBarItem];
+
+	
+	self.busy = NO;
+	
+//	self.hasRecentlyGeneratedSentences = NO;
 
 }
 
@@ -72,9 +97,15 @@
 - (void) shouldMakeStatusBarItem {
 	
 	self.statusBarItem = [[NSStatusBar systemStatusBar] statusItemWithLength:[[NSStatusBar systemStatusBar] thickness]];
+
+}
+
+- (void) shouldConfigureStatusBarItem {
+
 	[self.statusBarItem setMenu:self.statusBarItemMenu];
 	[self.statusBarItem setTitle:@""];
 	[self.statusBarItem setHighlightMode:YES];
+	[self.statusBarItem setIcon:[NSImage imageNamed:@"MWStatusItemIcon.pdf"] withAlternateIcon:[NSImage imageNamed:@"MWStatusItemIconAlternate.pdf"] ];	
 
 }
 
@@ -89,6 +120,20 @@
 
 # pragma mark IBOutlets
 
+
+
+
+
+- (IBAction) shouldCancelOperation:(id)sender {
+
+	[self stopGeneratingSentences];
+
+}
+
+
+
+
+
 - (IBAction) shouldGenerateOneSentence:(id)sender {
 
 }
@@ -98,6 +143,8 @@
 
 
 - (IBAction) shouldGenerateAsManySentencesAsRecentlyDid:(id)sender {
+
+	
 
 }
 
@@ -117,14 +164,6 @@
 
 
 
-- (IBAction) shouldGenerateManySentences:(id)sender {
-
-}
-
-
-
-
-
 - (IBAction) shouldGenerateManySentencesWithMatrixValue:(id)sender{
 
 	[self startGeneratingSentences:[[(NSMatrix *)sender selectedCell] tag]];
@@ -135,17 +174,12 @@
 }
 
 
-- (IBAction) shouldShowPreferences:(id)sender {
-
-	[self.statusBarItem startAnimation];
-
-}
 
 
 
+- (IBAction) shouldShowAbout:(id)sender {
 
-
-- (IBAction) shouldShowAboutWindow:(id)sender {
+	[[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:MOREWORD_PROJECT_SITE]];
 
 }
 
@@ -170,7 +204,30 @@
 
 - (void) startGeneratingSentences:(NSInteger)numberOfSentences {
 
+	NSLog(@"Generating %i sentences", numberOfSentences);
+	
+	self.busy = YES;
+	
+	[[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"hasRecentlyGeneratedSentences"];
+
 }
+
+
+
+
+
+- (void) stopGeneratingSentences {
+
+	self.busy = NO;
+	[self.statusBarItem stopAnimation];
+	[self shouldConfigureStatusBarItem];
+
+}
+
+
+
+
+
 
 
 
