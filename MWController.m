@@ -86,6 +86,7 @@
 
 
 
+
 # pragma mark IBOutlets
 
 - (IBAction) shouldGenerateOneSentence:(id)sender {
@@ -118,14 +119,20 @@
 
 - (IBAction) shouldGenerateManySentences:(id)sender {
 
-
-
-
-
 }
 
 
 
+
+
+- (IBAction) shouldGenerateManySentencesWithMatrixValue:(id)sender{
+
+	[self startGeneratingSentences:[[(NSMatrix *)sender selectedCell] tag]];
+	
+	[self.statusBarItem startAnimation];
+	[[self.statusBarItem menu] cancelTracking];
+
+}
 
 
 - (IBAction) shouldShowPreferences:(id)sender {
@@ -154,8 +161,33 @@
 
 
 
-@end
 
+
+
+
+
+# pragma mark Processing
+
+- (void) startGeneratingSentences:(NSInteger)numberOfSentences {
+
+}
+
+
+
+
+
+# pragma mark Networking
+
+
+
+
+
+
+
+
+
+
+@end
 
 
 
