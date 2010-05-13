@@ -17,6 +17,7 @@
 		FF70ED67119C625700A58703 /* MWStatusItemIconAlternate.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FF70ED66119C625700A58703 /* MWStatusItemIconAlternate.pdf */; };
 		FF70EE97119C707500A58703 /* NSView+Centering.m in Sources */ = {isa = PBXBuildFile; fileRef = FF70EE96119C707500A58703 /* NSView+Centering.m */; };
 		FF70EEFE119C73E100A58703 /* ObjC-SwizzleMethods.c in Sources */ = {isa = PBXBuildFile; fileRef = FF70EEFD119C73E100A58703 /* ObjC-SwizzleMethods.c */; };
+		FF70F096119C936200A58703 /* MWApplicationIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = FF70F095119C936200A58703 /* MWApplicationIcon.icns */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		FF70EE96119C707500A58703 /* NSView+Centering.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSView+Centering.m"; path = "Externals/NSView+Centering/NSView+Centering.m"; sourceTree = "<group>"; };
 		FF70EEFC119C73E100A58703 /* ObjC-SwizzleMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ObjC-SwizzleMethods.h"; path = "Externals/ObjC-SwizzleMethods/ObjC-SwizzleMethods.h"; sourceTree = "<group>"; };
 		FF70EEFD119C73E100A58703 /* ObjC-SwizzleMethods.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "ObjC-SwizzleMethods.c"; path = "Externals/ObjC-SwizzleMethods/ObjC-SwizzleMethods.c"; sourceTree = "<group>"; };
+		FF70F095119C936200A58703 /* MWApplicationIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = MWApplicationIcon.icns; path = Resources/MWApplicationIcon.icns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FF70F095119C936200A58703 /* MWApplicationIcon.icns */,
 				FF582119119BF0AB00131874 /* MWStatusItemIcon.pdf */,
 				FF70ED66119C625700A58703 /* MWStatusItemIconAlternate.pdf */,
 				8D1107310486CEB800E47090 /* moreWord-Info.plist */,
@@ -192,6 +195,7 @@
 				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
 				FF58211A119BF0AB00131874 /* MWStatusItemIcon.pdf in Resources */,
 				FF70ED67119C625700A58703 /* MWStatusItemIconAlternate.pdf in Resources */,
+				FF70F096119C936200A58703 /* MWApplicationIcon.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
