@@ -7,27 +7,32 @@
 //
 
 #import <Cocoa/Cocoa.h>
-//	#import <JSON/JSON.h>
 
 #import "JSON/SBJSON.h"
 #import "JSON/NSObject+SBJSON.h"
 #import "JSON/NSString+SBJSON.h"
 
 #import "LFWebAPIKit.h"
+#import "LFHTTPRequest.h"
 
 #import "MWStatusItem.h"
 #import "NSStatusItem+Iconology.h"
 #import "MWConfiguration.h"
 #import "MWTransformSentencesGenerated.h"
 
+
+
+
+
 @interface MWController : NSObject <NSApplicationDelegate> {
 
 	MWStatusItem *statusBarItem;
 	IBOutlet NSMenu *statusBarItemMenu;
 
-	BOOL busy;
-//	NSInteger *recentlyGeneratedSentenceCount;
+	NSOperationQueue *queue;
 
+	BOOL busy;
+	
 }
 
 
@@ -36,6 +41,8 @@
 
 @property (retain) NSStatusItem *statusBarItem;
 @property (retain) NSMenu *statusBarItemMenu;
+
+@property (retain) NSOperationQueue *queue;
 
 @property (assign) BOOL busy;
 

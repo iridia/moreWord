@@ -32,7 +32,7 @@
 
 @implementation MWController
 
-@synthesize busy, statusBarItem, statusBarItemMenu;
+@synthesize busy, statusBarItem, statusBarItemMenu, queue;
 
 
 
@@ -71,13 +71,57 @@
 		0, @"recentlyGeneratedSentences",
 		
 	nil]];
+	
+	self.queue = [[NSOperationQueue alloc] init];
 
 
 	[self shouldMakeStatusBarItem];	
 	[self shouldConfigureStatusBarItem];
-
 	
-	self.busy = NO;
+	NSLog(@"now we have %@, %@", self.statusBarItem, [self.statusBarItem respondsToSelector:@selector(observeValueForKeyPath:ofObject:change:context:)] ? @"YES" : @"NO");
+	
+	[self addObserver:self.statusBarItem forKeyPath:@"busy" options:(NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld) context:NULL];
+
+	[self addObserver:self.statusBarItem forKeyPath:@"queue" options:(NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld) context:NULL];
+
+	[self didChangeValueForKey:@"busy"];
+	
+//	- (void)didChange:(NSKeyValueChange)change valuesAtIndexes:(NSIndexSet *)indexes forKey:(NSString *)key
+
+}
+
+
+
+
+
+
+
+
+
+
+
+# pragma mark Status
+
+- (BOOL) busy {
+
+	NSLog(@"Was asked whether app is busy.  queue is present? %@", 
+	
+		(self.queue == nil) ? @"NO" : @"YES"
+		
+	);
+
+	if (!self.queue) return NO;
+	
+	NSLog(@"Queue is there, any operations?, %x, %@", 
+	
+		self.queue.operationCount, 
+		(self.queue.operationCount > 0) ? @"SOME OPs" : @"NO OPS"
+		
+	);
+	
+	if (self.queue.operationCount > 0) return YES;
+	
+	return NO;
 
 }
 
@@ -188,9 +232,7 @@
 
 - (IBAction) shouldTerminateApplication:(id)sender {
 
-
 	[[NSApplication sharedApplication] terminate:self];
-
 
 }
 
@@ -212,9 +254,39 @@
 	[self.statusBarItem startAnimation];
 	[[self.statusBarItem menu] cancelTracking];
 
-	self.busy = YES;
+//	self.busy = YES;
 	
 	[[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"hasRecentlyGeneratedSentences"];
+	
+	
+	
+	
+	
+	NSBlockOperation* __block blockOperation = [NSBlockOperation blockOperationWithBlock: ^{
+
+	//	Fetch
+
+		LFHTTPRequest *endpointWorker = [[[LFHTTPRequest alloc] init] autorelease];
+            
+		endpointWorker.shouldWaitUntilDone = YES;
+		endpointWorker.delegate = self;
+		endpointWorker.timeoutInterval = 5.0;
+		
+		NSString *requestURLString = [NSString stringWithFormat:@"%@?n=%i", MORETEXT_ENDPOINT, numberOfSentences];
+		
+		NSLog(@"Firing request %@", requestURLString);
+		
+		[endpointWorker performMethod:LFHTTPRequestGETMethod onURL:[NSURL URLWithString:requestURLString] withData:nil];
+		
+		NSString *responseString = [NSString stringWithCString:[[endpointWorker receivedData] bytes] encoding:NSUTF8StringEncoding];
+		
+		NSLog(@"received data: %@", responseString);
+		
+		if (responseString == NULL) NSLog(@"NULL DATA!");
+
+	}];
+	
+	[self.queue addOperation:blockOperation];
 
 }
 
@@ -224,7 +296,8 @@
 
 - (void) stopGeneratingSentences {
 
-	self.busy = NO;
+//	self.busy = NO;
+
 	[self.statusBarItem stopAnimation];
 	[self shouldConfigureStatusBarItem];
 
@@ -240,11 +313,6 @@
 
 
 # pragma mark Networking
-
-
-
-
-
 
 
 
