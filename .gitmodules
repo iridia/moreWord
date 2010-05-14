@@ -16,3 +16,6 @@
 [submodule "Externals/NSView+DumpDimensions"]
 	path = Externals/NSView+DumpDimensions
 	url = git://github.com/monoceroi/NSView-DumpDimensions.git
+[submodule "Externals/NSUserDefaults+MNAdditions"]
+	path = Externals/NSUserDefaults+MNAdditions
+	url = git://github.com/monoceroi/NSUserDefaults-MNAdditions.git
