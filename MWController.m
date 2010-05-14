@@ -14,12 +14,23 @@
 
 @interface MWController (Private)
 
+- (void) updateBusyStatus;
 - (void) shouldMakeStatusBarItem;
 - (void) shouldConfigureStatusBarItem;
 - (void) startGeneratingSentences:(NSInteger)numberOfSentences;
 - (void) stopGeneratingSentences;
 
 @end
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -64,14 +75,9 @@
 	
 	self.queue = [[NSOperationQueue alloc] init];
 
-
 	[self shouldMakeStatusBarItem];	
 	[self shouldConfigureStatusBarItem];
-	
-	NSLog(@"now we have %@, %@", self.statusBarItem, [self.statusBarItem respondsToSelector:@selector(observeValueForKeyPath:ofObject:change:context:)] ? @"YES" : @"NO");
-	
-	[self addObserver:self.statusBarItem forKeyPath:@"busy" options:(NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld) context:NULL];
-
+		
 	[self updateBusyStatus];	
 
 }
@@ -80,12 +86,7 @@
 
 
 
-- (void) awakeFromNib {
-
-
-
-}
-
+- (void) awakeFromNib {}
 
 
 
@@ -100,26 +101,34 @@
 
 - (void) updateBusyStatus {
 
-	NSLog(@"Was asked whether app is busy.  queue is present? %@", 
+	if (!self.queue) {
 	
-		(self.queue == nil) ? @"NO" : @"YES"
+		self.busy = NO;
+		return;
+	
+	}
+	
+	if (self.queue.operationCount > 0) {
+	
+		self.busy = YES;
 		
-	);
-
-	if (!self.queue) self.busy = NO;
+	} else {
 	
-	NSLog(@"Queue is there, any operations?, %x, %@", 
+		self.busy = NO;
 	
-		self.queue.operationCount, 
-		(self.queue.operationCount > 0) ? @"SOME OPs" : @"NO OPS"
-		
-	);
-	
-	if (self.queue.operationCount > 0) self.busy = YES;
-	
-	self.busy = NO;
+	}
 
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -158,7 +167,17 @@
 
 
 
-# pragma mark IBOutlets
+
+
+
+
+
+
+
+
+
+
+# pragma mark IBOutlets & Generation Helper Methods
 
 
 
@@ -186,7 +205,7 @@
 
 - (IBAction) shouldGenerateAsManySentencesAsRecentlyDid:(id)sender {
 
-	
+	[self startGeneratingSentences:[[NSUserDefaults standardUserDefaults] integerForKey:@"recentlyGeneratedSentences"]];
 
 }
 
@@ -241,24 +260,30 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
 # pragma mark Processing
 
 - (void) startGeneratingSentences:(NSInteger)numberOfSentences {
 
-	NSLog(@"Generating %i sentence(s).", numberOfSentences);
-		
 	[self updateBusyStatus];
 	
 	[self.statusBarItem startAnimation];
 	[[self.statusBarItem menu] cancelTracking];
-
-//	self.busy = YES;
 	
 	[[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"hasRecentlyGeneratedSentences"];
-	
-	
-	
-	
+
+
+
+
 	
 	NSBlockOperation* __block blockOperation = [NSBlockOperation blockOperationWithBlock: ^{
 
@@ -266,6 +291,14 @@
 		
 		int retryCount = 0;
 		int retryCap = 3;
+		
+		NSString *responseString;
+		
+		
+		
+		
+		
+	//	Fetch
 
 		LFHTTPRequest *endpointWorker = [[[LFHTTPRequest alloc] init] autorelease];
             
@@ -277,32 +310,34 @@
 
 			NSString *requestURLString = [NSString stringWithFormat:@"%@?n=%i", MORETEXT_ENDPOINT, numberOfSentences];
 			
-			NSLog(@"Firing request %@", requestURLString);
-			
 			[endpointWorker performMethod:LFHTTPRequestGETMethod onURL:[NSURL URLWithString:requestURLString] withData:nil];
 			
-			NSString *responseString = [NSString stringWithCString:[[endpointWorker receivedData] bytes] encoding:NSUTF8StringEncoding];
+			responseString = [NSString stringWithCString:[[endpointWorker receivedData] bytes] encoding:NSUTF8StringEncoding];
 			
 			NSLog(@"received data: %@", responseString);
 			
 			if (responseString != NULL) {
 			
 				fetchFinished = YES;
-				
 				break;
 			
 			}
 			
 			retryCount += 1; 
-			
-			if (retryCount >= retryCap) {
-			
-				[self cancel];
-				return;
-			
-			}
+			if (retryCount >= retryCap) return;
 		
 		}
+		
+		
+		
+		
+		
+	//	Process JSON
+	
+		SBJsonParser *dataParser = [SBJsonParser new];
+		NSArray *sentences = [(NSDictionary *)[dataParser objectWithString:responseString] objectForKey:@"sentences"];
+		
+		NSLog(@"parsed, %i", [sentences count]);
 	
 	}];
 	
@@ -318,6 +353,8 @@
 
 - (void) stopGeneratingSentences {
 
+	[self.queue cancelAllOperations];
+
 	[self.statusBarItem stopAnimation];
 	[self shouldConfigureStatusBarItem];
 	
@@ -331,23 +368,6 @@
 
 
 
-
-
-
-# pragma mark Networking
-
-
-
-
-
-- (void) observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
-
-	NSLog(@"from delegate.  the app’s status has just changed! %@, %@, %@, %@", keyPath, object, change, context);
-
-	if ([super respondsToSelector:@selector(observeValueForKeyPath:ofObject:change:context:)])
-	[super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
-
-}
 
 
 

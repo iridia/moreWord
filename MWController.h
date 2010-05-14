@@ -26,7 +26,7 @@
 
 @interface MWController : NSObject <NSApplicationDelegate> {
 
-	MWStatusItem *statusBarItem;
+	NSStatusItem *statusBarItem;
 	IBOutlet NSMenu *statusBarItemMenu;
 
 	NSOperationQueue *queue;

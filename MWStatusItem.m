@@ -11,4 +11,20 @@
 
 @implementation MWStatusItem
 
+
+
+
+
+# pragma Over
+
+- (void) observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+
+	NSLog(@"the app’s status has just changed! %@, %@, %@, %@", keyPath, object, change, context);
+
+	if ([super respondsToSelector:@selector(observeValueForKeyPath:ofObject:change:context:)])
+	[super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
+
+}
+
+
 @end
