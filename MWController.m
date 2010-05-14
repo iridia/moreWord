@@ -54,16 +54,6 @@
 
 
 
-+ (void) initialize {
-
-	[NSValueTransformer setValueTransformer:[[MWTransformSentencesGenerated alloc] init] forName:@"MWTransformSentencesGenerated"];
-
-}
-
-
-
-
-
 - (void) applicationDidFinishLaunching:(NSNotification *)aNotification {
 
 	[[NSUserDefaults standardUserDefaults] registerDefaults:[NSDictionary dictionaryWithObjectsAndKeys:

@@ -15,7 +15,6 @@
 #import "LFWebAPIKit.h"
 #import "LFHTTPRequest.h"
 
-#import "MWStatusItem.h"
 #import "NSStatusItem+Iconology.h"
 #import "MWConfiguration.h"
 #import "MWTransformSentencesGenerated.h"

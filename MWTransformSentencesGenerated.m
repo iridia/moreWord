@@ -15,6 +15,16 @@
 
 
 
++ (void) initialize {
+
+	[NSValueTransformer setValueTransformer:[[MWTransformSentencesGenerated alloc] init] forName:@"MWTransformSentencesGenerated"];
+
+}
+
+
+
+
+
 + (Class) transformedValueClass {
 
 	return [NSString class];

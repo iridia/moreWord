@@ -12,7 +12,6 @@
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
-		FF232EF9119CC69500FAEE34 /* MWStatusItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FF232EF8119CC69500FAEE34 /* MWStatusItem.m */; };
 		FF5820D7119BEDC100131874 /* NSStatusItem+Iconology.m in Sources */ = {isa = PBXBuildFile; fileRef = FF5820D6119BEDC100131874 /* NSStatusItem+Iconology.m */; };
 		FF58211A119BF0AB00131874 /* MWStatusItemIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FF582119119BF0AB00131874 /* MWStatusItemIcon.pdf */; };
 		FF70ED67119C625700A58703 /* MWStatusItemIconAlternate.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FF70ED66119C625700A58703 /* MWStatusItemIconAlternate.pdf */; };
@@ -27,6 +26,7 @@
 		FF70F345119CB32F00A58703 /* NSData+LFHTTPFormExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = FF70F342119CB32F00A58703 /* NSData+LFHTTPFormExtensions.m */; };
 		FF70F386119CB39A00A58703 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF70F385119CB39A00A58703 /* CoreFoundation.framework */; };
 		FF70F38E119CB3B300A58703 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF70F38D119CB3B300A58703 /* SystemConfiguration.framework */; };
+		FFA4A1EE119D0DFF00B97A84 /* NSUserDefaults+MNAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA4A1ED119D0DFF00B97A84 /* NSUserDefaults+MNAdditions.m */; };
 		FFFDEDDF119CBAFE00EFB205 /* JSON.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = FFFDED94119CBA8900EFB205 /* JSON.framework */; };
 		FFFDEE14119CBB6B00EFB205 /* JSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFFDED94119CBA8900EFB205 /* JSON.framework */; };
 /* End PBXBuildFile section */
@@ -103,8 +103,6 @@
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		8D1107310486CEB800E47090 /* moreWord-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "moreWord-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* moreWord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = moreWord.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FF232EF7119CC69500FAEE34 /* MWStatusItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWStatusItem.h; sourceTree = "<group>"; };
-		FF232EF8119CC69500FAEE34 /* MWStatusItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWStatusItem.m; sourceTree = "<group>"; };
 		FF5820D5119BEDC100131874 /* NSStatusItem+Iconology.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSStatusItem+Iconology.h"; path = "Externals/NSStatusItem+Iconology/NSStatusItem+Iconology.h"; sourceTree = "<group>"; };
 		FF5820D6119BEDC100131874 /* NSStatusItem+Iconology.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSStatusItem+Iconology.m"; path = "Externals/NSStatusItem+Iconology/NSStatusItem+Iconology.m"; sourceTree = "<group>"; };
 		FF582119119BF0AB00131874 /* MWStatusItemIcon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = MWStatusItemIcon.pdf; path = Resources/MWStatusItemIcon.pdf; sourceTree = "<group>"; };
@@ -129,6 +127,8 @@
 		FF70F342119CB32F00A58703 /* NSData+LFHTTPFormExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+LFHTTPFormExtensions.m"; path = "Externals/LFWebAPIKit/NSData+LFHTTPFormExtensions.m"; sourceTree = "<group>"; };
 		FF70F385119CB39A00A58703 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		FF70F38D119CB3B300A58703 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		FFA4A1EC119D0DFF00B97A84 /* NSUserDefaults+MNAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSUserDefaults+MNAdditions.h"; path = "Externals/NSUserDefaults+MNAdditions/NSUserDefaults+MNAdditions.h"; sourceTree = "<group>"; };
+		FFA4A1ED119D0DFF00B97A84 /* NSUserDefaults+MNAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSUserDefaults+MNAdditions.m"; path = "Externals/NSUserDefaults+MNAdditions/NSUserDefaults+MNAdditions.m"; sourceTree = "<group>"; };
 		FFFDED85119CBA8900EFB205 /* JSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = JSON.xcodeproj; path = "Externals/JSON-Framework/JSON.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -151,8 +151,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				FF232EF7119CC69500FAEE34 /* MWStatusItem.h */,
-				FF232EF8119CC69500FAEE34 /* MWStatusItem.m */,
+				FFA4A1EC119D0DFF00B97A84 /* NSUserDefaults+MNAdditions.h */,
+				FFA4A1ED119D0DFF00B97A84 /* NSUserDefaults+MNAdditions.m */,
 				FF70F126119C992E00A58703 /* MWTransformSentencesGenerated.h */,
 				FF70F127119C992E00A58703 /* MWTransformSentencesGenerated.m */,
 				FF70F0C9119C956D00A58703 /* MWConfiguration.h */,
@@ -165,6 +165,8 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FF70F38D119CB3B300A58703 /* SystemConfiguration.framework */,
+				FF70F385119CB39A00A58703 /* CoreFoundation.framework */,
 				FF70F2D4119CAD9E00A58703 /* QuartzCore.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
 			);
@@ -193,13 +195,11 @@
 			isa = PBXGroup;
 			children = (
 				080E96DDFE201D6D7F000001 /* Classes */,
-				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				FF70F035119C835D00A58703 /* Externals */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				FF70F385119CB39A00A58703 /* CoreFoundation.framework */,
-				FF70F38D119CB3B300A58703 /* SystemConfiguration.framework */,
 			);
 			name = moreWord;
 			sourceTree = "<group>";
@@ -238,12 +238,8 @@
 		FF70F035119C835D00A58703 /* Externals */ = {
 			isa = PBXGroup;
 			children = (
+				FFA4A1A2119D0D5100B97A84 /* LFWebAPIKit */,
 				FFFDED85119CBA8900EFB205 /* JSON.xcodeproj */,
-				FF70F33C119CB32F00A58703 /* LFHTTPRequest.h */,
-				FF70F33D119CB32F00A58703 /* LFHTTPRequest.m */,
-				FF70F33E119CB32F00A58703 /* LFSiteReachability.h */,
-				FF70F33F119CB32F00A58703 /* LFSiteReachability.m */,
-				FF70F340119CB32F00A58703 /* LFWebAPIKit.h */,
 				FF70F341119CB32F00A58703 /* NSData+LFHTTPFormExtensions.h */,
 				FF70F342119CB32F00A58703 /* NSData+LFHTTPFormExtensions.m */,
 				FF70F26D119CA6FC00A58703 /* NSView+DumpDimensions.h */,
@@ -256,6 +252,18 @@
 				FF5820D6119BEDC100131874 /* NSStatusItem+Iconology.m */,
 			);
 			name = Externals;
+			sourceTree = "<group>";
+		};
+		FFA4A1A2119D0D5100B97A84 /* LFWebAPIKit */ = {
+			isa = PBXGroup;
+			children = (
+				FF70F33C119CB32F00A58703 /* LFHTTPRequest.h */,
+				FF70F33D119CB32F00A58703 /* LFHTTPRequest.m */,
+				FF70F33E119CB32F00A58703 /* LFSiteReachability.h */,
+				FF70F33F119CB32F00A58703 /* LFSiteReachability.m */,
+				FF70F340119CB32F00A58703 /* LFWebAPIKit.h */,
+			);
+			name = LFWebAPIKit;
 			sourceTree = "<group>";
 		};
 		FFFDED86119CBA8900EFB205 /* Products */ = {
@@ -384,7 +392,7 @@
 				FF70F343119CB32F00A58703 /* LFHTTPRequest.m in Sources */,
 				FF70F344119CB32F00A58703 /* LFSiteReachability.m in Sources */,
 				FF70F345119CB32F00A58703 /* NSData+LFHTTPFormExtensions.m in Sources */,
-				FF232EF9119CC69500FAEE34 /* MWStatusItem.m in Sources */,
+				FFA4A1EE119D0DFF00B97A84 /* NSUserDefaults+MNAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
