@@ -17,7 +17,7 @@
 
 + (void) initialize {
 
-	[NSValueTransformer setValueTransformer:[[MWTransformSentencesGenerated alloc] init] forName:@"MWTransformSentencesGenerated"];
+	[NSValueTransformer setValueTransformer:[[[MWTransformSentencesGenerated alloc] init] autorelease] forName:@"MWTransformSentencesGenerated"];
 
 }
 

@@ -8,3 +8,7 @@
 
 #define MOREWORD_PROJECT_SITE @"http://moreword.iridia.tw"
 #define MORETEXT_ENDPOINT @"http://more.handlino.com/sentences.json"
+
+
+
+

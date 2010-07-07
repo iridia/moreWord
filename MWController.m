@@ -54,7 +54,7 @@
 
 
 
-- (void) applicationDidFinishLaunching:(NSNotification *)aNotification {
+- (void) applicationDidFinishLaunching: (NSNotification *)aNotification {
 
 	[[NSUserDefaults standardUserDefaults] registerDefaults:[NSDictionary dictionaryWithObjectsAndKeys:
 	
@@ -68,7 +68,7 @@
 	[self shouldMakeStatusBarItem];	
 	[self shouldConfigureStatusBarItem];
 		
-	[self updateBusyStatus];	
+	[self updateBusyStatus];
 
 }
 
@@ -98,16 +98,8 @@
 	
 	}
 	
-	if (self.queue.operationCount > 0) {
+	self.busy = ([self.queue.operations count] > 0);
 	
-		self.busy = YES;
-		
-	} else {
-	
-		self.busy = NO;
-	
-	}
-
 }
 
 
@@ -205,9 +197,7 @@
 
 - (IBAction) shouldGenerateManySentencesWithInput:(id)sender {
 
-
-	//	Needs a prompt!
-
+	//	FIXME: Needs a prompt.
 
 }
 
@@ -264,74 +254,64 @@
 
 - (void) startGeneratingSentences:(NSInteger)numberOfSentences {
 
-	[self updateBusyStatus];
-	
 	[self.statusBarItem startAnimation];
 	[[self.statusBarItem menu] cancelTracking];
 	
-	[[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"hasRecentlyGeneratedSentences"];
-
-
-
-
+	[self.queue addOperationWithBlock: ^ {
 	
-	NSBlockOperation* __block blockOperation = [NSBlockOperation blockOperationWithBlock: ^{
-
-		BOOL fetchFinished = NO;
-		
 		int retryCount = 0;
 		int retryCap = 3;
 		
-		NSString *responseString;
-		
-		
-		
-		
-		
-	//	Fetch
-
 		LFHTTPRequest *endpointWorker = [[[LFHTTPRequest alloc] init] autorelease];
             
 		endpointWorker.shouldWaitUntilDone = YES;
 		endpointWorker.delegate = self;
 		endpointWorker.timeoutInterval = 5.0;
 		
-		while (!fetchFinished) {
+		NSString *responseString;
+		
+		do {
 
-			NSString *requestURLString = [NSString stringWithFormat:@"%@?n=%i", MORETEXT_ENDPOINT, numberOfSentences];
+			NSString *requestURLString = [NSString stringWithFormat:@"%@?n=%i&corpus=laihe", MORETEXT_ENDPOINT, numberOfSentences];
 			
 			[endpointWorker performMethod:LFHTTPRequestGETMethod onURL:[NSURL URLWithString:requestURLString] withData:nil];
 			
-			responseString = [NSString stringWithCString:[[endpointWorker receivedData] bytes] encoding:NSUTF8StringEncoding];
+			responseString = [[NSString alloc] initWithData:[endpointWorker receivedData] encoding:NSUTF8StringEncoding];
 			
-			NSLog(@"received data: %@", responseString);
-			
-			if (responseString != NULL) {
-			
-				fetchFinished = YES;
-				break;
-			
-			}
-			
-			retryCount += 1; 
-			if (retryCount >= retryCap) return;
+			retryCount += 1; if (retryCount >= retryCap) return;
 		
-		}
-		
-		
-		
-		
-		
-	//	Process JSON
+		} while (responseString.length == 0);
+				
+		[self performSelectorOnMainThread:@selector(hadGeneratedSentences:) withObject:[[responseString JSONValue] objectForKey:@"sentences"] waitUntilDone:NO];
 	
-		SBJsonParser *dataParser = [SBJsonParser new];
-		NSArray *sentences = [(NSDictionary *)[dataParser objectWithString:responseString] objectForKey:@"sentences"];
-		
-		NSLog(@"parsed, %i", [sentences count]);
+	}];	
 	
-	}];
+	[self updateBusyStatus];
 	
-	[self.queue addOperation:blockOperation];
+//	[[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"hasRecentlyGeneratedSentences"];
+	
+}
+
+
+
+
+
+- (void) hadGeneratedSentences:(NSArray *)sentences {
+
+	NSMutableString *finalString = [[NSMutableString alloc] initWithString:@""];
+	
+	for (NSString *sentenceContext in sentences)
+	[finalString appendString:sentenceContext];
+	
+	NSPasteboard *pasteBoard = [NSPasteboard generalPasteboard];
+	[pasteBoard declareTypes:[NSArray arrayWithObjects:NSStringPboardType, nil] owner:nil];
+	[pasteBoard setString:finalString forType:NSStringPboardType];
+	
+	NSBeep();
+	
+	
+	[self.statusBarItem stopAnimation];
+	[self shouldConfigureStatusBarItem];
 	
 	[self updateBusyStatus];
 
