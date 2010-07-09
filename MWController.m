@@ -69,6 +69,18 @@
 	[self shouldConfigureStatusBarItem];
 		
 	[self updateBusyStatus];
+	
+	[NSEvent addGlobalMonitorForEventsMatchingMask:NSKeyDownMask handler: ^ (NSEvent *event) {
+
+		int commandKeyDown = [event modifierFlags] & NSCommandKeyMask;
+		int optionKeyDown = [event modifierFlags] & NSAlternateKeyMask;
+		int controlKeyDown = [event modifierFlags] & NSControlKeyMask;
+
+		if (!(([event keyCode] == 111) && commandKeyDown && optionKeyDown && controlKeyDown)) return;
+
+		[self startGeneratingSentences:1];
+		
+	}];
 
 }
 
@@ -254,8 +266,8 @@
 
 - (void) startGeneratingSentences:(NSInteger)numberOfSentences {
 
-	[self.statusBarItem startAnimation];
 	[[self.statusBarItem menu] cancelTracking];
+	[self.statusBarItem startAnimation];
 	
 	[self.queue addOperationWithBlock: ^ {
 	
