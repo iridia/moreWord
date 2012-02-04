@@ -1,17 +1,17 @@
-# Finder
-
 .DS_Store
 
+design/*.png
+design/*.png*
 
+preview/*.png
+preview/*.png*
 
+frontend/*.tmproj
 
 
 # Sparkle
 
 dsa_priv.pem
-
-
-
 
 
 # Xcode Config
@@ -22,9 +22,10 @@ dsa_priv.pem
 *.perspective
 *.perspectivev3
 *.pbxuser
-
-
-
+*.xcuserdatad
+*.xcworkspacedata
+*.xcuserstate
+.LSOverride
 
 
 # Generated files
@@ -32,16 +33,11 @@ dsa_priv.pem
 VersionX-revision.h
 
 
-
-
-
 # Builds
 
 build/
+Build/
 *.[oa]
-
-
-
 
 
 # Other SCMs
@@ -49,9 +45,6 @@ build/
 .hg
 .svn
 CVS
-
-
-
 
 
 # Backups
@@ -64,3 +57,20 @@ CVS
 Backup[ ]of[ ]*.pages/
 Backup[ ]of[ ]*.key/
 Backup[ ]of[ ]*.numbers/
+
+*.timemachine.supported
+
+Archives/*droplet.app
+Archives/*.ipa
+Design/*.png
+
+build/*
+Releases/build-*
+*.pbxuser
+*.mode1v3
+*.perspectivev3
+DerivedData/*
+
+# localize.py
+*.strings.new
+*.strings.old
